@@ -1,3 +1,5 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <h1>Heello</h1>
+</template>
