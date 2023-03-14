@@ -1,9 +1,15 @@
 <template>
-  <div></div>
+  <button>test</button>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "CoolButton",
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+button {
+  background-color: antiquewhite;
+}
+</style>

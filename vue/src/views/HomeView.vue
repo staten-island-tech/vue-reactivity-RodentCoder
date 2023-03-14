@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
-    <button @click="check" v-if="alive">Alive</button>
-    <button @click="check" v-else>Dead</button>
+    <CoolButton @click="check">Test</CoolButton>
+
     <h1 v-if="alive">{{ students }} is a person</h1>
     <h1 v-else="alive">{{ students }} is not a person</h1>
     <h2>things to steal from him</h2>
@@ -14,9 +14,10 @@
 </template>
 
 <script>
+import CoolButton from "../components/CoolButton.vue";
 export default {
   name: "Home",
-  components: {},
+  components: { CoolButton },
   data() {
     return {
       message: "",
