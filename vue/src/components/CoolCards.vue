@@ -11,7 +11,7 @@ export default {
   name: "CoolCard",
   props: {
     title: String,
-    description: String,
+    Region: String,
     image: String,
   },
 };

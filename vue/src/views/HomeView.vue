@@ -8,10 +8,12 @@
     <input type="text" placeholder="type something" v-model="message" />
     <p>{{ message }}</p>
     <CoolCard
-      title="hello words"
-      description="man"
-      image="https://previews.123rf.com/images/nickp37/nickp371202/nickp37120200104/12295296-two-men.jpg"
-    />
+      v-for="pokemon in pokemons"
+      :key="pokemon.name"
+      :title="pokemon.name"
+      :Region="pokemon.Region"
+      :image="pokemon.img"
+    ></CoolCard>
   </div>
 </template>
 
@@ -27,6 +29,57 @@ export default {
       students: "Daniel",
       vulablebodyparts: ["brain", "liver", "lungs", "kidney"],
       alive: true,
+      pokemons: [
+        {
+          name: "Pinsar",
+          Region: "Kanto",
+          Look: "Ugly",
+          competitive: "OU",
+          img: "https://static.wikia.nocookie.net/ultrakill/images/2/2b/Filth-Trans.png/revision/latest?cb=20221001151216",
+        },
+        {
+          name: "Victreebel",
+          Region: "Kanto",
+          Look: "Actually Ugly",
+          competitive: "PU",
+          img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png",
+        },
+        {
+          name: "Galvantula",
+          Region: "Unova",
+          Look: "Cool",
+          competitive: "RU",
+          img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/596.png",
+        },
+        {
+          name: "Celebi",
+          Region: "Johto",
+          Look: "Kinda Cute",
+          competitive: "UU",
+          img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+        },
+        {
+          name: "Kyogre",
+          Region: "Johto",
+          Look: "Goofy",
+          competitive: "Uber",
+          img: "https://static.wikia.nocookie.net/pokemon/images/4/41/382Kyogre.png/revision/latest?cb=20201003100403",
+        },
+        {
+          name: "Volcarona",
+          Region: "Unova",
+          Look: "Cute",
+          competitive: "OU",
+          img: "https://static.pokemonpets.com/images/monsters-images-800-800/2637-Shiny-Volcarona.webp",
+        },
+        {
+          name: "Chandelure",
+          Region: "Unova",
+          Look: "Awesome",
+          competitive: "UU",
+          img: "https://archives.bulbagarden.net/media/upload/thumb/9/97/0609Chandelure.png/250px-0609Chandelure.png",
+        },
+      ],
     };
   },
   methods: {
