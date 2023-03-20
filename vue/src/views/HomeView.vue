@@ -6,6 +6,7 @@
       :title="ultrakill.name"
       :Price="ultrakill.Price"
       :image="ultrakill.img"
+      :detail="ultrakill.detail"
     ></CoolCard>
   </div>
 </template>
@@ -23,36 +24,55 @@ export default {
           name: "Piercer",
           Price: "$100",
           img: "../images/Piercer.webp",
+          detail: "placeholder text",
         },
         {
           name: "Marksman",
           Price: "$100",
           img: "../images/Marksman.webp",
+          detail: "placeholder text",
         },
         {
-          name: "Galvantula",
+          name: "Core-Eject Shotun",
           Price: "$100",
-          img: "",
+          img: "./images/Core_Shotgun.webp",
+          detail: "placeholder text",
         },
         {
-          name: "Celebi",
+          name: "Pump Shotgun",
           Price: "$100",
-          img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+          img: "../images/Pump_Shotgun.webp",
+          detail: "placeholder text",
         },
         {
-          name: "Kyogre",
+          name: "Attractor",
           Price: "$100",
-          img: "https://static.wikia.nocookie.net/pokemon/images/4/41/382Kyogre.png/revision/latest?cb=20201003100403",
+          img: "../images/Attractor_Nailgun.webp",
+          detail: "placeholder text",
         },
         {
-          name: "Volcarona",
+          name: "Overheat",
           Price: "$100",
-          img: "https://static.pokemonpets.com/images/monsters-images-800-800/2637-Shiny-Volcarona.webp",
+          img: "../images/Overheat_Nailgun.webp",
+          detail: "placeholder text",
         },
         {
-          name: "Chandelure",
+          name: "Electric Railgun",
           Price: "$100",
-          img: "https://archives.bulbagarden.net/media/upload/thumb/9/97/0609Chandelure.png/250px-0609Chandelure.png",
+          img: "../images/ChargedERail.webp",
+          detail: "placeholder text",
+        },
+        {
+          name: "Malicicous Railgun",
+          Price: "$100",
+          img: "../images/ChargedMRail.webp",
+          detail: "placeholder text",
+        },
+        {
+          name: "ScrewDriver",
+          Price: "$100",
+          img: "../images/ChargedSRail.webp",
+          detail: "placeholder text",
         },
       ],
     };
