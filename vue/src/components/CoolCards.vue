@@ -28,14 +28,14 @@ body {
   padding: 0px;
 }
 .card {
-  display: flex;
-  flex-direction: row;
+  width: 2100%;
+  border: 8px solid rgba(218, 95, 95, 0.878);
+  margin-bottom: 10px;
+  background-color: coral;
   text-align: center;
-  background-color: aqua;
-  color: white;
 }
 .cardimg {
-  height: 10%;
-  width: 10%;
+  height: 15vh;
+  width: 20vh;
 }
 </style>

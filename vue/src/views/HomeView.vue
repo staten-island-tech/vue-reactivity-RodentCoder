@@ -1,13 +1,15 @@
 <template>
   <div class="Home">
-    <CoolCard
-      v-for="ultrakill in ultrakill"
-      :key="ultrakill.name"
-      :title="ultrakill.name"
-      :Price="ultrakill.Price"
-      :image="ultrakill.img"
-      :detail="ultrakill.detail"
-    ></CoolCard>
+    <div class="Gallery">
+      <CoolCard
+        v-for="ultrakill in ultrakill"
+        :key="ultrakill.name"
+        :title="ultrakill.name"
+        :Price="ultrakill.Price"
+        :image="ultrakill.img"
+        :detail="ultrakill.detail"
+      ></CoolCard>
+    </div>
   </div>
 </template>
 
@@ -69,7 +71,7 @@ export default {
           detail: "placeholder text",
         },
         {
-          name: "ScrewDriver",
+          name: "Screw Driver",
           Price: "$100",
           img: "../images/ChargedSRail.webp",
           detail: "placeholder text",
@@ -77,14 +79,16 @@ export default {
       ],
     };
   },
-  methods: {
-    check: function () {
-      if (this.alive === true) {
-        this.alive = false;
-      } else {
-        this.alive = true;
-      }
-    },
-  },
 };
 </script>
+
+<style>
+.Gallery {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+</style>
