@@ -4,6 +4,7 @@
     <img class="cardimg" v-bind:src="image" alt="" />
     <p class="cardprice">{{ Price }}</p>
     <p class="carddetails">{{ detail }}</p>
+    <CoolButton></CoolButton>
   </div>
 </template>
 
@@ -27,10 +28,17 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+.cardprice,
+.carddetails {
+  font-size: x-large;
+}
 .card {
-  width: 2100%;
+  height: 40vh;
+  width: 32vh;
   border: 8px solid rgba(218, 95, 95, 0.878);
   margin-bottom: 10px;
+  margin: 20px;
   background-color: coral;
   text-align: center;
 }

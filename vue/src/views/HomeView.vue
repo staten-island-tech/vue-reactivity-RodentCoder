@@ -1,5 +1,6 @@
 <template>
   <div class="Home">
+    <h1 class="header">Funny Shooter Game Shop</h1>
     <div class="Gallery">
       <CoolCard
         v-for="ultrakill in ultrakill"
@@ -83,6 +84,9 @@ export default {
 </script>
 
 <style>
+.header {
+  text-align: center;
+}
 .Gallery {
   display: flex;
   justify-content: space-evenly;
