@@ -3,14 +3,19 @@
     <h2 class="cardtitle">{{ title }}</h2>
     <img class="cardimg" v-bind:src="image" alt="" />
     <p class="cardprice">{{ Price }}</p>
+    <button @click="buy">Click Me!</button>
     <p class="carddetails">{{ detail }}</p>
-    <CoolButton></CoolButton>
   </div>
 </template>
 
 <script>
 export default {
   name: "CoolCard",
+  methods: {
+    buy() {
+      console.log("Nice");
+    },
+  },
   props: {
     title: String,
     Price: String,
@@ -28,8 +33,6 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
-.cardprice,
 .carddetails {
   font-size: x-large;
 }

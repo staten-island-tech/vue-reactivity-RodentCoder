@@ -15,11 +15,10 @@
 </template>
 
 <script>
-import CoolButton from "../components/CoolButton.vue";
 import CoolCard from "../components/CoolCards.vue";
 export default {
   name: "Home",
-  components: { CoolButton, CoolCard },
+  components: { CoolCard },
   data() {
     return {
       ultrakill: [
