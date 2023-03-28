@@ -12,9 +12,15 @@
 export default {
   name: "CoolCard",
   methods: {
-    buy() {
-      console.log("Nice");
+    buy: function () {
+      this.cart.push(this.Price);
+      console.log(this.cart);
     },
+  },
+  data() {
+    return {
+      cart: [],
+    };
   },
   props: {
     title: String,

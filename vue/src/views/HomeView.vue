@@ -24,19 +24,19 @@ export default {
       ultrakill: [
         {
           name: "Piercer",
-          Price: "$100",
+          Price: "$10",
           img: "../images/Piercer.webp",
           detail: "placeholder text",
         },
         {
           name: "Marksman",
-          Price: "$100",
+          Price: "$100000000",
           img: "../images/Marksman.webp",
           detail: "placeholder text",
         },
         {
           name: "Core-Eject Shotun",
-          Price: "$100",
+          Price: "$100000",
           img: "./images/Core_Shotgun.webp",
           detail: "placeholder text",
         },
