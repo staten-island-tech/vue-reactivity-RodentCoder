@@ -1,6 +1,7 @@
 <template>
   <div class="Home">
     <h1 class="header">Funny Shooter Game Shop</h1>
+    <button>Hm</button>
     <div class="Gallery">
       <CoolCard
         v-for="ultrakill in ultrakill"
@@ -17,7 +18,6 @@
 <script>
 import CoolCard from "../components/CoolCards.vue";
 export default {
-  name: "Home",
   components: { CoolCard },
   data() {
     return {

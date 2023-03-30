@@ -9,17 +9,22 @@
 </template>
 
 <script>
+import { reactive } from "vue";
+
+const cart = reactive({
+  cart: [],
+});
 export default {
   name: "CoolCard",
   methods: {
     buy: function () {
-      this.cart.push(this.Price);
-      console.log(this.cart);
+      cart.cart.push(`${this.title}:` + `${this.Price}`);
+      console.log(cart.cart);
     },
   },
   data() {
     return {
-      cart: [],
+      cart,
     };
   },
   props: {
