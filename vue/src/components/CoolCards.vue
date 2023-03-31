@@ -10,7 +10,7 @@
 
 <script>
 import { reactive } from "vue";
-
+export { cart };
 const cart = reactive({
   cart: [],
 });

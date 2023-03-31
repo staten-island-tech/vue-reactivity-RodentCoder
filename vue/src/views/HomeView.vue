@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <h1 class="header">Funny Shooter Game Shop</h1>
-    <button>Hm</button>
+    <button @click="displaycart">Hm</button>
     <div class="Gallery">
       <CoolCard
         v-for="ultrakill in ultrakill"
@@ -14,11 +14,16 @@
     </div>
   </div>
 </template>
-
 <script>
+import { cart } from "../components/CoolCards.vue";
 import CoolCard from "../components/CoolCards.vue";
 export default {
   components: { CoolCard },
+  computed: {
+    displaycart: function () {
+      cart.cart.forEach();
+    },
+  },
   data() {
     return {
       ultrakill: [
@@ -26,7 +31,7 @@ export default {
           name: "Piercer",
           Price: "$10",
           img: "../images/Piercer.webp",
-          detail: "placeholder text",
+          detail: "Idk go nuts",
         },
         {
           name: "Marksman",
