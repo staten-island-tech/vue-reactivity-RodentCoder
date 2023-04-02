@@ -1,7 +1,9 @@
 <template>
   <div class="Home">
     <h1 class="header">Funny Shooter Game Shop</h1>
-    <button @click="displaycart">Hm</button>
+    <div class="order">
+        <h2 class="history" v-for="carts in cart" :key="cart">{{ carts }}</h2>
+    </div>
     <div class="Gallery">
       <CoolCard
         v-for="ultrakill in ultrakill"
@@ -17,69 +19,73 @@
 <script>
 import { cart } from "../components/CoolCards.vue";
 import CoolCard from "../components/CoolCards.vue";
+import CoolCart from "../components/CoolCart.vue";
+
+function yes(){
+  let shop = Object.values(cart)
+      return shop
+}
+yes()
+
 export default {
-  components: { CoolCard },
-  computed: {
-    displaycart: function () {
-      cart.cart.forEach();
-    },
-  },
+  components: { CoolCard, CoolCart },
   data() {
     return {
+      cart,
       ultrakill: [
-        {
+        { 
           name: "Piercer",
           Price: "$10",
           img: "../images/Piercer.webp",
-          detail: "Idk go nuts",
+          detail: "Gun go shoot",
         },
         {
           name: "Marksman",
-          Price: "$100000000",
+          Price: "$100",
           img: "../images/Marksman.webp",
-          detail: "placeholder text",
+          detail: "The Spare Change in my back packet",
         },
         {
           name: "Core-Eject Shotun",
-          Price: "$100000",
+          Price: "$150",
           img: "./images/Core_Shotgun.webp",
-          detail: "placeholder text",
+          detail: "Gun go Boom",
         },
         {
           name: "Pump Shotgun",
-          Price: "$100",
+          Price: "$150",
           img: "../images/Pump_Shotgun.webp",
-          detail: "placeholder text",
+          detail: "Self Boom",
         },
         {
           name: "Attractor",
-          Price: "$100",
+          Price: "$300",
           img: "../images/Attractor_Nailgun.webp",
-          detail: "placeholder text",
+          detail: "Nails",
         },
         {
           name: "Overheat",
-          Price: "$100",
+          Price: "$300",
           img: "../images/Overheat_Nailgun.webp",
-          detail: "placeholder text",
+          detail: "Nail go Brrrr",
         },
         {
           name: "Electric Railgun",
-          Price: "$100",
+          Price: "$500",
           img: "../images/ChargedERail.webp",
-          detail: "placeholder text",
+          detail: "Laser",
         },
         {
           name: "Malicicous Railgun",
-          Price: "$100",
+          Price: "$500",
           img: "../images/ChargedMRail.webp",
-          detail: "placeholder text",
+          detail: "Exolsoping Laser",
         },
         {
           name: "Screw Driver",
-          Price: "$100",
+          Price: "$500",
           img: "../images/ChargedSRail.webp",
-          detail: "placeholder text",
+          detail: "Useless",
         },
       ],
     };
@@ -90,6 +96,18 @@ export default {
 <style>
 .header {
   text-align: center;
+}
+
+.order{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100% auto;
+}
+.history{
+ text-align: center;
 }
 .Gallery {
   display: flex;

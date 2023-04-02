@@ -3,7 +3,7 @@
     <h2 class="cardtitle">{{ title }}</h2>
     <img class="cardimg" v-bind:src="image" alt="" />
     <p class="cardprice">{{ Price }}</p>
-    <button @click="buy">Click Me!</button>
+    <button class="buy" @click="buy">Buy</button>
     <p class="carddetails">{{ detail }}</p>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import { reactive } from "vue";
 export { cart };
 const cart = reactive({
-  cart: [],
+  cart: []
 });
 export default {
   name: "CoolCard",
@@ -60,4 +60,17 @@ body {
   height: 15vh;
   width: 20vh;
 }
+.buy{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 12px 14px;
+  text-align: center;
+}
+
+
 </style>

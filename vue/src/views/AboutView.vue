@@ -8,6 +8,12 @@ export default {};
 
 <style scoped></style>
 
+  <!-- <div class="order">
+      <ul>
+        <li class="history" v-for="carts in cart" :key="carts">{{ carts }}</li>
+      </ul>
+    </div> -->
+
 <!-- <template>
   <div class="Home">
     <CoolButton @click="check">Test</CoolButton>
